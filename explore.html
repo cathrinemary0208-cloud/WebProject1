@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <title>Explore Page</title>
@@ -24,15 +25,31 @@ background:black;
 color:white;
 }
 
+/* HEADER */
+
 header{
-background:#222;
-padding:20px;
-text-align:center;
+background:#111;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 header h1{
 font-family:"Great Vibes",cursive;
 font-size:32px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:16px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#ff3b3b;
 }
 
 /* FILTER SECTION */
@@ -47,7 +64,6 @@ padding:30px;
 
 .filters select,
 .filters button{
-
 padding:10px 18px;
 font-weight:bold;
 border-radius:6px;
@@ -63,10 +79,6 @@ color:black;
 background:#ff3b3b;
 color:white;
 cursor:pointer;
-}
-
-.filters button:hover{
-opacity:0.9;
 }
 
 /* CAR GRID */
@@ -110,6 +122,33 @@ color:#bbb;
 margin:4px 0;
 }
 
+/* hidden cars */
+
+.car-hidden{
+display:none;
+}
+
+/* LOAD MORE BUTTON */
+
+.load-more-container{
+text-align:center;
+padding:30px;
+}
+
+#loadMoreBtn{
+background:#ff3b3b;
+color:white;
+border:none;
+padding:12px 30px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+#loadMoreBtn:hover{
+opacity:0.9;
+}
+
 /* TABLET */
 
 @media (max-width:992px){
@@ -145,7 +184,16 @@ width:90%;
 <body>
 
 <header>
+
 <h1>Explore Cars</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Explore</a>
+<a href="#">Recently Added</a>
+<a href="#">Login</a>
+</nav>
+
 </header>
 
 <main>
@@ -186,11 +234,11 @@ width:90%;
 
 <!-- CAR GRID -->
 
-<div class="grid-container">
+<div class="grid-container" id="carGrid">
 
 <div class="grid-item" data-price="22" data-location="Mumbai" data-brand="Toyota">
 <img src="Driveback_imgs/CAR1_heroAngle.jpeg">
-<h5>Toyota Innova Crysta</h5>
+<h5>Toyota Innova</h5>
 <p>2022</p>
 <p>₹22L</p>
 <p>Mumbai</p>
@@ -220,58 +268,7 @@ width:90%;
 <p>Bangalore</p>
 </div>
 
-<div class="grid-item" data-price="8" data-location="Chennai" data-brand="Maruti">
-<img src="Driveback_imgs/car5_heroAngle.jpeg">
-<h5>Maruti Swift</h5>
-<p>2021</p>
-<p>₹8L</p>
-<p>Chennai</p>
-</div>
-
-
-
-<div class="grid-item" data-price="22" data-location="Mumbai" data-brand="Toyota">
-<img src="Driveback_imgs/CAR1_heroAngle.jpeg">
-<h5>Toyota Innova Crysta</h5>
-<p>2022</p>
-<p>₹22L</p>
-<p>Mumbai</p>
-</div>
-
-<div class="grid-item" data-price="18" data-location="Delhi" data-brand="Honda">
-<img src="Driveback_imgs/car2_heroAngle.jpeg">
-<h5>Honda CR-V</h5>
-<p>2021</p>
-<p>₹18L</p>
-<p>Delhi</p>
-</div>
-
-<div class="grid-item" data-price="55" data-location="Mumbai" data-brand="BMW">
-<img src="Driveback_imgs/car3_heroAngle.jpeg">
-<h5>BMW X5</h5>
-<p>2020</p>
-<p>₹55L</p>
-<p>Mumbai</p>
-</div>
-
-<div class="grid-item" data-price="16" data-location="Bangalore" data-brand="Hyundai">
-<img src="Driveback_imgs/car4_heroAngle.jpeg">
-<h5>Hyundai Creta</h5>
-<p>2022</p>
-<p>₹16L</p>
-<p>Bangalore</p>
-</div>
-
-<div class="grid-item" data-price="8" data-location="Chennai" data-brand="Maruti">
-<img src="Driveback_imgs/car5_heroAngle.jpeg">
-<h5>Maruti Swift</h5>
-<p>2021</p>
-<p>₹8L</p>
-<p>Chennai</p>
-</div>
-</div>
-<div>
-   <div class="grid-item car-hidden">
+<div class="grid-item car-hidden">
 <img src="Driveback_imgs/car5_heroAngle.jpeg">
 <h5>Maruti Swift</h5>
 <p>2021</p>
@@ -305,13 +302,17 @@ width:90%;
 
 </div>
 
+
+<div class="load-more-container">
+<button id="loadMoreBtn" onclick="loadMore()">Load More</button>
 </div>
-<button type="submit" id="loadMorebtn" onclick="loadMore">Load more</button>
 
 </main>
 
 
 <script>
+
+/* FILTER */
 
 function filterCars(){
 
@@ -329,19 +330,13 @@ let carBrand=car.dataset.brand;
 
 let show=true;
 
-/* Budget */
-
 if(budget!=="all" && carPrice>budget){
 show=false;
 }
 
-/* Location */
-
 if(location!=="all" && carLocation!==location){
 show=false;
 }
-
-/* Brand */
 
 if(brand!=="all" && carBrand!==brand){
 show=false;
@@ -353,28 +348,26 @@ car.style.display=show?"block":"none";
 
 }
 
-/*Load More*/
+/* LOAD MORE */
 
-
-let currentIndex = 0;
+let currentIndex=0;
 
 function loadMore(){
 
-let hiddenCars = document.querySelectorAll(".car-hidden");
+let hiddenCars=document.querySelectorAll(".car-hidden");
 
-for(let i = currentIndex; i < currentIndex + 4 && i < hiddenCars.length; i++){
+for(let i=currentIndex;i<currentIndex+4 && i<hiddenCars.length;i++){
+hiddenCars[i].style.display="block";
+}
 
-hiddenCars[i].style.display = "block";
+currentIndex+=4;
+
+if(currentIndex>=hiddenCars.length){
+document.getElementById("loadMoreBtn").style.display="none";
+}
 
 }
 
-currentIndex += 4;
-
-if(currentIndex >= hiddenCars.length){
-document.getElementById("loadMoreBtn").style.display = "none";
-}
-
-}
 </script>
 
 </body>
