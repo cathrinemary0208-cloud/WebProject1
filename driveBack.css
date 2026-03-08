@@ -1,0 +1,279 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background-color:gray;
+color:ghostwhite;
+}
+
+h3{
+padding:8px 3px;
+font-size:20px;
+display:inline-block;
+font-family:"Great Vibes", cursive;
+}
+
+h1{
+display:inline-block;
+margin-top:12px;
+font-family:"Great Vibes", cursive;
+
+}
+
+header{
+background:#000;
+padding:15px;
+border-bottom:1px solid #222;
+
+}
+
+.header-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+.driveBack_logo{
+width:120px;
+border-radius:200px;
+margin-left:30px;
+margin-top:6px;
+vertical-align:top;
+
+}
+
+.login_logo{
+background-color:white;
+border-radius:200px;
+width:60px;
+margin-right:5px;
+}
+a{
+color:red;
+font-family:'Times New Roman', Times, serif;
+
+
+
+}
+
+.hero_img{
+display:block;
+width:100%;
+height:auto;
+object-fit:cover;
+border:5px solid black;
+}
+
+.hero{
+overflow:hidden;
+width:100%;
+}
+
+.brand-card{
+background:#111;
+padding:10px;
+border-radius:5px;
+min-width:90px;
+text-align:center;
+}
+
+.brand-card img{
+width:70px;
+}
+
+.browse_brand{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+padding:10px 15px;
+background-color:black;
+}
+
+.extra{
+display:none;
+}
+
+.div_header{
+background-color:black;
+margin-top:5px;
+padding:5px 15px;
+}
+
+button{
+background-color:black;
+color:rgb(173,164,164);
+border:3px solid black;
+padding:4px;
+font-family:'Times New Roman', Times, serif;
+margin-top:5px;
+cursor:pointer;
+}
+
+.explore{
+background:black;
+padding:10px;
+margin-top:5px;
+}
+
+.explore-innerbox{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+
+}
+.recently-added-header p
+{
+    font-size:45px;
+    float:right;
+}
+
+
+.explore-innerbox2{
+display:grid;
+grid-template-columns: minmax(22%,700px) 
+minmax(22%,700px) minmax(22%,700px) auto;
+gap:5%;
+align-items:center;
+margin-top:10px;
+max-width:1000px;
+margin-right:auto;
+margin-left:5vw;
+}
+
+.filter{
+padding:8px;
+font-family:'Times New Roman', Times, serif;
+}
+
+.add-filter{
+background-color:red;
+color:white;
+font-weight:bold;
+padding:3px 20px 3px 20px;
+border-radius:20px;
+border:none;
+}
+
+
+
+button
+{
+    float:right;
+}
+.outer-box
+{
+           display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+            background-color: #000;
+    
+}
+ 
+.outer-box-item
+{
+           background-color: #111;
+            border: 1px solid #333;
+            width: 23%;
+            padding: 5px;
+            border-radius: 8px;
+            transition: 0.3s;
+
+}
+.outer-box-item img
+{
+    width:100%;
+    border:2px solid black;
+    border-radius:5px;
+}
+.outer-box-item:hover {
+            transform: translateY(-5px);
+        }
+
+.recently-added
+{
+    background-color:black;
+    margin-top:5px;
+    display:inline-block;
+}
+.recently-added-header
+{
+ background-color: black;
+}
+
+
+
+.next-car
+{
+  text-align:center;
+  letter-spacing:3px;
+  word-spacing:5px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.next-car h1
+{
+    display:block;
+
+}
+.next-car button
+{
+    background-color:red;
+    border:none;
+    padding:13px 30px 13px 30px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:bold;
+    float:none;
+    color:white;
+}
+.next-car input
+{
+    padding:5px;
+    display:flex;
+    gap:20px;
+}
+.next-car-controls
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:100px;
+    flex-wrap:wrap;
+    margin-top:20px;
+    margin-right:15%;
+    margin-left:15%;
+    
+}
+aside h3
+{
+    font-family:"Dancind-script", cursive;
+    padding:10px;
+    font-weight:300;
+    
+}
+aside
+{
+    background-color: black;
+    margin-top:5px;
+    padding:10px;
+}
+aside p
+{
+    display:flex;
+    justify-content: center;
+    font-size:18px;
+}
+.next-car-next
+{
+    background-color: #000;
+    padding:20px;
+    margin-top:10px;
+}

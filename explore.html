@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Explore Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        header {
+            background-color: gray;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 30px;
+            font-family:"Great Vibes",cursive;
+        }
+
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background-color: #111;
+            border: 1px solid #333;
+            width: 23%;
+            padding: 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .grid-item h5 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .grid-item p {
+            font-size: 14px;
+            color: #bbb;
+            margin: 4px 0;
+        }
+        .filter
+        {
+           background-color:white;
+           color:black;
+           font-weight:bold;
+           padding:0.5% 5% 0.5% 5%;
+           margin:2%;
+           
+
+        }
+        button
+        {
+            background-color:rgb(99, 91, 91);
+            cursor: pointer;
+            padding:10px 23px 10px 23px;
+            border-radius:10px;
+            font-weight:bold;
+            display:block;
+             margin:auto;
+             border:none;
+             border:2px ridge black;
+            
+
+        }
+        button:hover
+        {
+            opacity:0.9;
+            transition:0.4s;
+        }
+
+        /* Tablet */
+        @media (max-width: 992px) {
+            .grid-item {
+                width: 45%;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .grid-item {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Explore</h1>
+</header>
+<main>
+<div>
+    <tabel>
+    <tr>
+        <td>
+           <select class="filter">
+        <option value="invalid">Budget :</option>
+        <option>1L - 5L</option>
+        <option>5L - 10L</option>
+        <option>10L -20L</option>
+        <option>25L - 30L</option>
+        <option>30L - 40L</option>
+        <option>50L++</option>
+    </select>
+    </td> 
+    <select class="filter">
+        <option value="invalid">Location</option>
+        <option>Delhi</option>
+       <option>America</option>
+       <option>Punjab</option>
+        <option>Kerala</option>
+    </select>
+    <td>
+        <select class="filter">
+            <option value="invalid">All Brands:</option>
+            <option>Audi</option>
+            <option>Benz</option>
+            <option>Toyota</option>
+            <option>Tata</option>
+        </select>
+    </td>
+</tr>
+</tabel></div>
+    
+
+
+
+    <div class="grid-container">
+
+        <!-- Repeat Card -->
+        <div class="grid-item">
+            <img src="Driveback_imgs/CAR1_heroAngle.jpeg" alt="Car">
+            <h5>Toyota Innova Crysta</h5>
+            <p>2022</p>
+            <p>₹ 22L</p>
+            <p>Mumbai</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car2_heroAngle.jpeg" alt="Car">
+            <h5>Honda CR-V</h5>
+            <p>2021</p>
+            <p>₹ 18L</p>
+            <p>Delhi</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car3_heroAngle.jpeg" alt="Car">
+            <h5>BMW X5</h5>
+            <p>2020</p>
+            <p>₹ 55L</p>
+            <p>Mumbai</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car4_heroAngle.jpeg" alt="Car">
+            <h5>Hyundai Creta</h5>
+            <p>2022</p>
+            <p>₹ 16L</p>
+            <p>Bangalore</p>
+        </div>
+        <div class="grid-item">
+            <img src="Driveback_imgs/car5_heroAngle.jpeg" alt="Car">
+            <h5>Maruti Suzuki Swift</h5>
+            <p>2021</p>
+            <p>₹ 8L</p>
+            <p>Chennai</p>
+        </div>
+        <div class="grid-item">
+            <img src="Driveback_imgs/CAR1_heroAngle.jpeg" alt="Car">
+            <h5>Toyota Innova Crysta</h5>
+            <p>2022</p>
+            <p>₹ 22L</p>
+            <p>Mumbai</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car2_heroAngle.jpeg" alt="Car">
+            <h5>Honda CR-V</h5>
+            <p>2021</p>
+            <p>₹ 18L</p>
+            <p>Delhi</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car3_heroAngle.jpeg" alt="Car">
+            <h5>BMW X5</h5>
+            <p>2020</p>
+            <p>₹ 55L</p>
+            <p>Mumbai</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car4_heroAngle.jpeg" alt="Car">
+            <h5>Hyundai Creta</h5>
+            <p>2022</p>
+            <p>₹ 16L</p>
+            <p>Bangalore</p>
+        </div>
+        <div class="grid-item">
+            <img src="Driveback_imgs/car5_heroAngle.jpeg" alt="Car">
+            <h5>Maruti Suzuki Swift</h5>
+            <p>2021</p>
+            <p>₹ 8L</p>
+            <p>Chennai</p>
+        </div>
+        <div class="grid-item">
+            <img src="Driveback_imgs/CAR1_heroAngle.jpeg" alt="Car">
+            <h5>Toyota Innova Crysta</h5>
+            <p>2022</p>
+            <p>₹ 22L</p>
+            <p>Mumbai</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car2_heroAngle.jpeg" alt="Car">
+            <h5>Honda CR-V</h5>
+            <p>2021</p>
+            <p>₹ 18L</p>
+            <p>Delhi</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car3_heroAngle.jpeg" alt="Car">
+            <h5>BMW X5</h5>
+            <p>2020</p>
+            <p>₹ 55L</p>
+            <p>Mumbai</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car4_heroAngle.jpeg" alt="Car">
+            <h5>Hyundai Creta</h5>
+            <p>2022</p>
+            <p>₹ 16L</p>
+            <p>Bangalore</p>
+        </div>
+        <div class="grid-item">
+            <img src="Driveback_imgs/car5_heroAngle.jpeg" alt="Car">
+            <h5>Maruti Suzuki Swift</h5>
+            <p>2021</p>
+            <p>₹ 8L</p>
+            <p>Chennai</p>
+        </div>
+        <div class="grid-item">
+            <img src="Driveback_imgs/CAR1_heroAngle.jpeg" alt="Car">
+            <h5>Toyota Innova Crysta</h5>
+            <p>2022</p>
+            <p>₹ 22L</p>
+            <p>Mumbai</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car2_heroAngle.jpeg" alt="Car">
+            <h5>Honda CR-V</h5>
+            <p>2021</p>
+            <p>₹ 18L</p>
+            <p>Delhi</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car3_heroAngle.jpeg" alt="Car">
+            <h5>BMW X5</h5>
+            <p>2020</p>
+            <p>₹ 55L</p>
+            <p>Mumbai</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car4_heroAngle.jpeg" alt="Car">
+            <h5>Hyundai Creta</h5>
+            <p>2022</p>
+            <p>₹ 16L</p>
+            <p>Bangalore</p>
+        </div>
+        <div class="grid-item">
+            <img src="Driveback_imgs/car5_heroAngle.jpeg" alt="Car">
+            <h5>Maruti Suzuki Swift</h5>
+            <p>2021</p>
+            <p>₹ 8L</p>
+            <p>Chennai</p>
+        </div>
+        <div class="grid-item">
+            <img src="Driveback_imgs/CAR1_heroAngle.jpeg" alt="Car">
+            <h5>Toyota Innova Crysta</h5>
+            <p>2022</p>
+            <p>₹ 22L</p>
+            <p>Mumbai</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car2_heroAngle.jpeg" alt="Car">
+            <h5>Honda CR-V</h5>
+            <p>2021</p>
+            <p>₹ 18L</p>
+            <p>Delhi</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car3_heroAngle.jpeg" alt="Car">
+            <h5>BMW X5</h5>
+            <p>2020</p>
+            <p>₹ 55L</p>
+            <p>Mumbai</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="Driveback_imgs/car4_heroAngle.jpeg" alt="Car">
+            <h5>Hyundai Creta</h5>
+            <p>2022</p>
+            <p>₹ 16L</p>
+            <p>Bangalore</p>
+        </div>
+        
+        
+
+    </div>
+    <button type="submit">Load More</button>
+</main>
+
+</body>
+</html>

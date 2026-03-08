@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- White border -->
+  <circle cx="256" cy="256" r="250" fill="black" stroke="white" stroke-width="24"></circle>
+
+  <!-- Head -->
+  <circle cx="256" cy="200" r="80" fill="white"></circle>
+
+  <!-- Extended body -->
+  <path d="M110 410c30-120 262-120 292 0" fill="white"></path>
+</svg>
