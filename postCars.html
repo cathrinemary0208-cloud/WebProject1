@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Post your Cars</title>
+<meta charset="utf-8">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background-image:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+url("Driveback_imgs/postcar_bg.jpg");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+/* Heading Section */
+
+.header{
+text-align:center;
+max-width:700px;
+margin-top:40px;
+}
+
+.header h1{
+font-size:40px;
+letter-spacing:1px;
+margin-bottom:10px;
+}
+
+.header p{
+font-size:16px;
+line-height:1.6;
+opacity:0.9;
+}
+
+/* Form Card */
+
+.post-form{
+margin-top:40px;
+margin-bottom:60px;
+
+padding:35px;
+
+min-width:500px;
+max-width:700px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,0.25);
+
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
+
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+/* Labels */
+
+label{
+font-size:14px;
+margin-top:5px;
+}
+
+/* Inputs */
+
+input, textarea{
+width:100%;
+padding:10px 12px;
+border-radius:6px;
+border:none;
+
+background:rgba(255,255,255,0.9);
+
+font-size:14px;
+}
+
+textarea{
+height:90px;
+resize:none;
+}
+
+/* Button */
+
+button{
+margin-top:15px;
+padding:12px;
+
+border:none;
+border-radius:6px;
+
+background:#e50914;
+color:white;
+
+font-size:16px;
+font-weight:bold;
+
+cursor:pointer;
+transition:0.25s;
+}
+
+button:hover{
+background:#c40812;
+transform:scale(1.03);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<h1> Ready to Sell Your Car?</h1>
+<p>"Turn your car into opportunity. List it today and connect with genuine buyers looking for their next ride."</p>
+</div>
+
+<form id="carForm">
+
+<div class="post-form">
+
+<label>Car Brand</label>
+<input type="text" id="brand" required>
+
+<label>Model</label>
+<input type="text" id="model" required>
+
+<label>Year</label>
+<input type="number" id="year" required>
+
+<label>Price</label>
+<input type="number" id="price" required>
+
+<label>Kilometers Driven</label>
+<input type="number" id="km" required>
+
+<label>Location</label>
+<input type="text" id="location">
+
+<label>Description</label>
+<textarea id="description"></textarea>
+
+<label>Upload Car Image</label>
+<input type="file" id="image">
+
+<button type="submit">Post Car</button>
+
+</div>
+
+</form>
+
+<script>
+
+document.getElementById("carForm").addEventListener("submit", function(event){
+
+event.preventDefault();   // stop page refresh
+
+// get values from the form
+var brand = document.getElementById("brand").value;
+var model = document.getElementById("model").value;
+var year = document.getElementById("year").value;
+var price = document.getElementById("price").value;
+var km = document.getElementById("km").value;
+var location = document.getElementById("location").value;
+var description = document.getElementById("description").value;
+
+// create a car object
+var car = {
+brand: brand,
+model: model,
+year: year,
+price: price,
+km: km,
+location: location,
+description: description
+};
+
+// get existing cars from localStorage
+var cars = localStorage.getItem("cars");
+
+// if there are no cars yet, create empty array
+if(cars == null){
+cars = [];
+}else{
+cars = JSON.parse(cars);
+}
+
+// add the new car to the list
+cars.push(car);
+
+// save back to localStorage
+localStorage.setItem("cars", JSON.stringify(cars));
+
+// show message
+alert("Car posted successfully!");
+
+// clear the form
+document.getElementById("carForm").reset();
+
+});
+
+</script>
+
+</body>
+</html>
