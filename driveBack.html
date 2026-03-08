@@ -1,52 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <title>Driveback - Second Hand Car Marketplace</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link rel="stylesheet" href="driveBack.css">
 </head>
-
 <body>
-
 <header>
 <div class="header-container">
-
 <div>
 <h1>Driveback</h1>
 <img src="Driveback_imgs/driveBack_logoEdited.jpg" alt="LOGO" class="driveBack_logo">
 </div>
-
 <div >
 <img src="Driveback_imgs/Login_logo.svg" alt="Login" class="login_logo">
 <p><a href="login.html">Login</a></p>
 </div>
-
 </div>
 </header>
-
 <main>
-
 <div class="hero">
 <img src="Driveback_imgs/hero_img.jpeg" alt="Hero image" class="hero_img">
 </div>
-
 <div class="div_header">
 <h3>Browse by brand</h3>
 <button onclick="showBrands()" id="brandButton">View More</button>
 </div>
-
 <div class="browse_brand">
-
 <div class="brand-card"><img src="Driveback_imgs/Lexus_logo.jpeg"></div>
 <div class="brand-card"><img src="Driveback_imgs/Lexus_logo.jpeg"></div>
 <div class="brand-card"><img src="Driveback_imgs/Lexus_logo.jpeg"></div>
@@ -82,7 +67,7 @@
 <div class="explore-innerbox">
 
 <h3>Explore more</h3>
-<p ><span><span>&#8250</span></span></p>
+<a href="explore.html"><p ><span class="explore-arrow">&#8250;</span></p></a>
 </div>
 <div class="explore-innerbox2">
 
@@ -201,7 +186,7 @@
 <div class="recently-added">
     <div class="recently-added-header">
         <h3>Recently added</h3>
-     <p ><span>&#8250</span></p>
+    <a href="recent.html"><p ><span class="recent-arrow">&#8250</span></p></a> 
     </div>
     <div class="outer-box">
    <div class="outer-box-item">
@@ -275,62 +260,42 @@
 </aside>
 </main>
 <footer>
-
 <div class="footer-container">
-
 <table>
 <tr>
 <td><img src="Driveback_imgs/insta_logo.jpg"></td>
 <td>driveback_007</td>
 </tr>
-
 <tr>
 <td><img src="Driveback_imgs/mail_logo.webp"></td>
 <td>driveback_007@gmail.com</td>
 </tr>
-
 <tr>
 <td><img src="Driveback_imgs/whatsapp_logo.webp"></td>
 <td>+91 8807390064</td>
 </tr>
 </table>
-
 <div class="footer-logo">
 <img src="Driveback_imgs/driveBack_logoEdited.jpg">
 </div>
-
 </div>
-
 </footer>
-
 <script>
-
 function showBrands(){
-
 let items = document.querySelectorAll(".extra");
 let button = document.getElementById("brandButton");
-
 if(button.innerText === "View More"){
-
 items.forEach(function(i){
 i.style.display="block";
 });
-
 button.innerText="View Less";
-
 }else{
-
 items.forEach(function(i){
 i.style.display="none";
 });
-
 button.innerText="View More";
-
 }
-
 }
-
 </script>
-
 </body>
 </html>

@@ -46,6 +46,7 @@ vertical-align:top;
 
 }
 
+
 .login_logo{
 background-color:white;
 border-radius:200px;
@@ -159,7 +160,6 @@ border:none;
 }
 
 
-
 button
 {
     float:right;
@@ -254,7 +254,7 @@ button
 }
 aside h3
 {
-    font-family:"Dancing-script", cursive;
+    font-family:"Dancing-Script", cursive;
     padding:10px;
     font-weight:300;
     
@@ -305,4 +305,24 @@ padding:5px;
 .footer-logo img{
 width:180px;
 opacity:0.9;
+}
+
+
+.explore-arrow{
+font-size:50px;
+font-weight:bold;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+.explore-arrow:hover{
+color:red;
+transform:scale(1.2);
+}
+
+.recent-arrow{
+font-size:45px;
+float:right;
+cursor:pointer;
 }
