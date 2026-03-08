@@ -1,109 +1,56 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
+
 <head>
+
 <title>Login Page</title>
-<meta charset='utf-8'>
-<style type=text/css>
- 
- body{
-       color:white;
-       margin:0px;
-	   padding:0px;
-       min-height:100vh;
-       background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("Driveback_imgs/Loginpage_img.jpeg");
-       background-size:cover;
-       background-position:center;
-       background-repeat:no-repeat;
-       display:flex;
-       justify-content:center;
-       align-items:center;
-       	}   
- .login-box
- {
-   margin-top:90px;
-   margin-bottom:100px;
-   width:550px;
-   padding:20px;
-   border-radius:30px;
-   background:rgba(255,255,255,0.1);
-   backdrop-filter:blur;
-   -webkit-backdrop-filter:blur(10px);
-   border:1px solid rgba(255,255,255,0.3);
-   box-shadow:0px 8px 32px rgba(0,0,0,0.3);
-   color:white;
-   display:flex;
-   flex-direction:column;
-   align-items:center;
-   
-   
-  }
-  .login-box h1
-  {
-    text-align:center;
-	margin-bottom:20px;
-	font-weight:bold;
-  }
-  .input-box
-  {
-    margin-bottom:10px;
-  }
-  .input-box input
-  {
-    width:100%;
-	padding:17px;
-	border-radius:8px;
-	border:none;
-	outline:none;
-  }
-  button
-  {
-    width:300px;
-	padding:10px;
-	border:none;
-	border:3px solid gray;
-	border-radius:8px;
-	background:white;
-	font-weight:bold;
-	cursor:pointer;
-   }
-   .table
-   {
-     gap:20px;
-    }
-	label
-	{
-	  padding-right:60px;
-	  font-weight:bold;
-	}
-	#account
-	{
-	  font-weight:bold;
-	   
-	 } 
-	  
-</style>
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="login.css">
+
 </head>
-<body >
+
+<body>
+
 <div class="login-box">
- <h1>Login</h1>
-<table cellspacing=10px cellpadding=20px>  
+
+<h1>Login</h1>
+
+<table cellspacing="10" cellpadding="20">
+
 <tr class="input-box">
 <td>
-<label >Username</label>
-</td><td>
+<label>Username</label>
+</td>
+
+<td>
 <input type="text" placeholder="Enter your name">
-</td></tr>
+</td>
+</tr>
+
 <tr class="input-box">
 <td>
 <label>Password</label>
 </td>
+
 <td>
 <input type="password" placeholder="********">
-</td></tr>
+</td>
+</tr>
+
 </table>
-<p style="text-align:center">(OR)<p>
-<button type="submit" >Sign in with GOOGLE</button>
-<p id=account><span >No account?   <span style="text-decoration:underline">Create an account</span></p>
-</div>	
+
+<p style="text-align:center">(OR)</p>
+
+<button type="submit">Sign in with GOOGLE</button>
+
+<p id="account">
+No account?
+<span style="text-decoration:underline">Create an account</span>
+</p>
+
+</div>
+
 </body>
 </html>
