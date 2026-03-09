@@ -162,10 +162,6 @@ border:none;
 }
 
 
-button
-{
-    float:right;
-}
 .outer-box
 {
            display: flex;
@@ -316,9 +312,23 @@ float:right;
 cursor:pointer;
 transition:o.3s;
 }
-
+#brandButton
+{
+    float:right;
+}
 .arrow:hover{
 color:red;
 transform:scale(1.2);
+}
+.search-btn input
+{
+    padding:7px;
+    border:none;
+}
+.search-btn
+{
+    margin-left: auto;
+    margin-right:35px;
+    margin-top:10px;
 }
 
