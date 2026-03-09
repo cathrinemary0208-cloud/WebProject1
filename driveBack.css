@@ -54,7 +54,9 @@ width:60px;
 margin-right:5px;
 }
 a{
-color:red;
+color:white;
+float:right;
+margin-right:19px;
 font-family:'Times New Roman', Times, serif;
 
 
@@ -308,21 +310,15 @@ opacity:0.9;
 }
 
 
-.explore-arrow{
-font-size:50px;
-font-weight:bold;
-color:white;
+.arrow{
+font-size:45px;
+float:right;
 cursor:pointer;
-transition:0.3s;
+transition:o.3s;
 }
 
-.explore-arrow:hover{
+.arrow:hover{
 color:red;
 transform:scale(1.2);
 }
 
-.recent-arrow{
-font-size:45px;
-float:right;
-cursor:pointer;
-}

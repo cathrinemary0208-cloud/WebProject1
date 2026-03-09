@@ -1,245 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <title>Driveback - Second Hand Car Marketplace</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="driveBack.css">
+
 </head>
+
+
 <body>
+
 <header>
+
 <div class="header-container">
+
 <div>
 <h1>Driveback</h1>
 <img src="Driveback_imgs/driveBack_logoEdited.jpg" alt="LOGO" class="driveBack_logo">
 </div>
-<div >
+
+<div>
 <img src="Driveback_imgs/Login_logo.svg" alt="Login" class="login_logo">
-<p><a href="login.html">Login</a></p>
+<p><span class="login-txt"><a href="login.html">Login</a></span></p>
 </div>
+
 </div>
+
 </header>
+
+
 <main>
+
+
 <div class="hero">
 <img src="Driveback_imgs/hero_img.jpeg" alt="Hero image" class="hero_img">
 </div>
+
+
 <div class="div_header">
 <h3>Browse by brand</h3>
 <button onclick="showBrands()" id="brandButton">View More</button>
 </div>
+
+
 <div class="browse_brand">
-<div class="brand-card"><img src="Driveback_imgs/Lexus_logo.jpeg"></div>
-<div class="brand-card"><img src="Driveback_imgs/Lexus_logo.jpeg"></div>
-<div class="brand-card"><img src="Driveback_imgs/Lexus_logo.jpeg"></div>
-<div class="brand-card"><img src="Driveback_imgs/Hyundai_logo.jpeg"></div>
-<div class="brand-card"><img src="Driveback_imgs/Bmw_logo.jpeg"></div>
-<div class="brand-card"><img src="Driveback_imgs/Audi_logo.jpeg"></div>
 
+<div class="brand-card"><img src="Driveback_imgs/Lexus_logo.jpeg"></div>
 <div class="brand-card"><img src="Driveback_imgs/honda_logo.jpeg"></div>
-<div class="brand-card"><img src="Driveback_imgs/Bentley_logo.jpeg"></div>
-<div class="brand-card"><img src="Driveback_imgs/Lexus_logo.jpeg"></div>
+<div class="brand-card"><img src="Driveback_imgs/royce_logo.png"></div>
 <div class="brand-card"><img src="Driveback_imgs/Hyundai_logo.jpeg"></div>
 <div class="brand-card"><img src="Driveback_imgs/Bmw_logo.jpeg"></div>
 <div class="brand-card"><img src="Driveback_imgs/Audi_logo.jpeg"></div>
 
-<div class="brand-card extra"><img src="Driveback_imgs/honda_logo.jpeg"></div>
+<div class="brand-card extra"><img src="Driveback_imgs/subaru_logo.png"></div>
 <div class="brand-card extra"><img src="Driveback_imgs/Bentley_logo.jpeg"></div>
-<div class="brand-card extra"><img src="Driveback_imgs/Lexus_logo.jpeg"></div>
-<div class="brand-card extra"><img src="Driveback_imgs/Hyundai_logo.jpeg"></div>
-<div class="brand-card extra"><img src="Driveback_imgs/Bmw_logo.jpeg"></div>
-<div class="brand-card extra"><img src="Driveback_imgs/Audi_logo.jpeg"></div>
+<div class="brand-card extra"><img src="Driveback_imgs/dodge_logo.png"></div>
+<div class="brand-card extra"><img src="Driveback_imgs/landRover_logo.png"></div>
+<div class="brand-card extra"><img src="Driveback_imgs/Acura_logo.jpeg"></div>
+<div class="brand-card extra"><img src="Driveback_imgs/mini_logo.webp"></div>
 
-<div class="brand-card extra"><img src="Driveback_imgs/honda_logo.jpeg"></div>
-<div class="brand-card extra"><img src="Driveback_imgs/Bentley_logo.jpeg"></div>
-<div class="brand-card extra"><img src="Driveback_imgs/Lexus_logo.jpeg"></div>
-<div class="brand-card extra"><img src="Driveback_imgs/Hyundai_logo.jpeg"></div>
-<div class="brand-card extra"><img src="Driveback_imgs/Bmw_logo.jpeg"></div>
+<div class="brand-card extra"><img src="Driveback_imgs/w_logo.png"></div>
+<div class="brand-card extra"><img src="Driveback_imgs/toyota_logo.png"></div>
 <div class="brand-card extra"><img src="Driveback_imgs/Audi_logo.jpeg"></div>
 
 </div>
+
+
 
 <div class="explore">
 
 <div class="explore-innerbox">
 
 <h3>Explore more</h3>
-<a href="explore.html"><p ><span class="explore-arrow">&#8250;</span></p></a>
+<a href="explore.html"><p><span class="arrow">&#8250;</span></p></a>
+
 </div>
+
+
 <div class="explore-innerbox2">
 
-<select class="filter">
-<option value="invalid">Location</option>
-<option>Delhi</option>
-<option>Tamil Nadu</option>
+
+<select class="filter" id="locationFilter">
+
+<option value="">Location</option>
+<option value="Delhi">Delhi</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Pune">Pune</option>
+<option value="Bangalore">Bangalore</option>
+
 </select>
 
-<select class="filter">
-<option value="invalid">Budget</option>
-<option>1L - 5L</option>
-<option>5L - 10L</option>
-<option>10L - 15L</option>
-<option>15L - 20L</option>
+
+
+<select class="filter" id="budgetFilter">
+
+<option value="">Budget</option>
+<option value="1-5">1L - 5L</option>
+<option value="5-10">5L - 10L</option>
+<option value="10-15">10L - 15L</option>
+<option value="15-20">15L - 20L</option>
+
 </select>
 
-<select class="filter">
-<option value="invalid">Year</option>
-<option>2019</option>
-<option>2020</option>
-<option>2021</option>
-<option>2022</option>
-<option>2023</option>
+
+
+<select class="filter" id="yearFilter">
+
+<option value="">Year</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+
 </select>
 
-<button type="submit" class="add-filter">Add filter</button>
+
+<button class="add-filter" onclick="filterCars()">Add filter</button>
+
+
 </div>
+
 </div>
+
+
+
+<!-- MAIN CAR SECTION -->
+
 <div class="outer-box">
-    <div class="outer-box-item">
-    <img src="Driveback_imgs/CAR1_heroangle.jpeg">
-    <div class="car-info">
-       <h4>Volkswagen Polo</h4>
-       <p>2018</p>
-       <p class="price">₹ 6.5 L</p>
-       <p>Pune</p>
-    </div>
-    </div>
-    <!--Car card 2-->
 
-    <div class="outer-box-item">
-    <img src="Driveback_imgs/CAR1_heroangle.jpeg">
-    <div class="car-info">
-       <h4>Volkswagen Polo</h4>
-       <p>2018</p>
-       <p class="price">₹ 6.5 L</p>
-       <p>Pune</p>
-    </div>
-    </div>
-   <!--Car card 3-->
 
-   <div class="outer-box-item">
-    <img src="Driveback_imgs/CAR1_heroangle.jpeg">
-    <div class="car-info">
-       <h4>Volkswagen Polo</h4>
-       <p>2018</p>
-       <p class="price">₹ 6.5 L</p>
-       <p>Pune</p>
-    </div>
-    </div>
-   <!--Car card 4-->
-   <div class="outer-box-item">
-    <img src="Driveback_imgs/CAR1_heroangle.jpeg">
-    <div class="car-info">
-       <h4>Volkswagen Polo</h4>
-       <p>2018</p>
-       <p class="price">₹ 6.5 L</p>
-       <p>Pune</p>
-    </div>
-    </div>
-   <!--Car card 5-->
+<div class="outer-box-item" data-location="Bangalore" data-budget="1-5" data-year="2018">
 
-   <div class="outer-box-item">
-    <img src="Driveback_imgs/CAR1_heroangle.jpeg">
-    <div class="car-info">
-       <h4>Volkswagen Polo</h4>
-       <p>2018</p>
-       <p class="price">₹ 6.5 L</p>
-       <p>Pune</p>
-    </div>
-    </div>
-  <!--Car card 5-->
+<img src="Driveback_imgs/CAR1_heroangle.jpeg">
 
-  <div class="outer-box-item">
-    <img src="Driveback_imgs/CAR1_heroangle.jpeg">
-    <div class="car-info">
-       <h4>Volkswagen Polo</h4>
-       <p>2018</p>
-       <p class="price">₹ 6.5 L</p>
-       <p>Pune</p>
-    </div>
-    </div>
-<!--Car card 7-->
-
-  <div class="outer-box-item">
-    <img src="Driveback_imgs/CAR1_heroangle.jpeg">
-    <div class="car-info">
-       <h4>Volkswagen Polo</h4>
-       <p>2018</p>
-       <p class="price">₹ 6.5 L</p>
-       <p>Pune</p>
-    </div>
-    </div>
-<!--Car card 8-->
- <div class="outer-box-item">
-    <img src="Driveback_imgs/CAR1_heroangle.jpeg">
-    <div class="car-info">
-       <h4>Volkswagen Polo</h4>
-       <p>2018</p>
-       <p class="price">₹ 6.5 L</p>
-       <p>Pune</p>
-    </div>
-    </div>
+<div class="car-info">
+<h4>Maruti Suzuki Swift</h4>
+<p>2018</p>
+<p class="price">₹ 4 L</p>
+<p>Bangalore</p>
 </div>
+
+</div>
+
+
+
+<div class="outer-box-item" data-location="Bangalore" data-budget="10-15" data-year="2020">
+
+<img src="Driveback_imgs/car2_heroAngle.jpeg">
+
+<div class="car-info">
+<h4>Toyota Fortuner</h4>
+<p>2020</p>
+<p class="price">₹ 10 L</p>
+<p>Bangalore</p>
+</div>
+
+</div>
+
+
+
+<div class="outer-box-item" data-location="Pune" data-budget="10-15" data-year="2020">
+
+<img src="Driveback_imgs/car3_heroAngle.jpeg">
+
+<div class="car-info">
+<h4>Toyota Camry</h4>
+<p>2020</p>
+<p class="price">₹ 13 L</p>
+<p>Pune</p>
+</div>
+
+</div>
+
+
+
+<div class="outer-box-item" data-location="Pune" data-budget="5-10" data-year="2018">
+
+<img src="Driveback_imgs/car4_heroAngle.jpeg">
+
+<div class="car-info">
+<h4>Volkswagen Polo</h4>
+<p>2018</p>
+<p class="price">₹ 6.5 L</p>
+<p>Pune</p>
+</div>
+
+</div>
+
+
+
+<div class="outer-box-item" data-location="Pune" data-budget="10-15" data-year="2018">
+
+<img src="Driveback_imgs/car5_heroAngle.jpeg">
+
+<div class="car-info">
+<h4>BMW X5</h4>
+<p>2018</p>
+<p class="price">₹ 12 L</p>
+<p>Pune</p>
+</div>
+
+</div>
+
+
+
+<div class="outer-box-item" data-location="Pune" data-budget="5-10" data-year="2018">
+
+<img src="Driveback_imgs/car13_heroAngle.png">
+
+<div class="car-info">
+<h4>Hyundai Grand i10</h4>
+<p>2018</p>
+<p class="price">₹ 6.5 L</p>
+<p>Pune</p>
+</div>
+
+</div>
+
+
+
+<div class="outer-box-item" data-location="Pune" data-budget="5-10" data-year="2018">
+
+<img src="Driveback_imgs/car7_heroAngle.png">
+
+<div class="car-info">
+<h4>Alfa Romeo Giulia</h4>
+<p>2018</p>
+<p class="price">₹ 6.5 L</p>
+<p>Pune</p>
+</div>
+
+</div>
+
+
+
+<div class="outer-box-item" data-location="Pune" data-budget="5-10" data-year="2018">
+
+<img src="Driveback_imgs/car8_heroAngle.png">
+
+<div class="car-info">
+<h4>Toyota Hilux</h4>
+<p>2018</p>
+<p class="price">₹ 6.5 L</p>
+<p>Pune</p>
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- RECENTLY ADDED -->
+
+
 <div class="recently-added">
-    <div class="recently-added-header">
-        <h3>Recently added</h3>
-    <a href="recent.html"><p ><span class="recent-arrow">&#8250</span></p></a> 
-    </div>
-    <div class="outer-box">
-   <div class="outer-box-item">
-    <img src="Driveback_imgs/CAR1_heroangle.jpeg">
-    <div class="car-info">
-       <h4>Volkswagen Polo</h4>
-       <p>2018</p>
-       <p class="price">₹ 6.5 L</p>
-       <p>Pune</p>
-    </div>
-    </div>
-    <!--Car card 2-->
 
-    <div class="outer-box-item">
-    <img src="Driveback_imgs/CAR1_heroangle.jpeg">
-    <div class="car-info">
-       <h4>Volkswagen Polo</h4>
-       <p>2018</p>
-       <p class="price">₹ 6.5 L</p>
-       <p>Pune</p>
-    </div>
-    </div>
-   <!--Car card 3-->
+<div class="recently-added-header">
 
-   <div class="outer-box-item">
-    <img src="Driveback_imgs/CAR1_heroangle.jpeg">
-    <div class="car-info">
-       <h4>Volkswagen Polo</h4>
-       <p>2018</p>
-       <p class="price">₹ 6.5 L</p>
-       <p>Pune</p>
-    </div>
-    </div>
-   <!--Car card 4-->
-   <div class="outer-box-item">
-    <img src="Driveback_imgs/CAR1_heroangle.jpeg">
-    <div class="car-info">
-       <h4>Volkswagen Polo</h4>
-       <p>2018</p>
-       <p class="price">₹ 6.5 L</p>
-       <p>Pune</p>
-    </div>
-    </div>
+<h3>Recently added</h3>
+
+<a href="recent.html">
+<p><span class="arrow">&#8250</span></p>
+</a>
 
 </div>
+
+
+<div class="outer-box">
+
+
+<div class="outer-box-item">
+
+<img src="Driveback_imgs/car9_heroAngle.png">
+
+<div class="car-info">
+<h4>Toyota Camry</h4>
+<p>2021</p>
+<p class="price">₹ 14 L</p>
+<p>Pune</p>
 </div>
+
+</div>
+
+
+<div class="outer-box-item">
+
+<img src="Driveback_imgs/car10_heroAngle.png">
+
+<div class="car-info">
+<h4>Volkswagen Jetta</h4>
+<p>2019</p>
+<p class="price">₹ 9 L</p>
+<p>Bangalore</p>
+</div>
+
+</div>
+
+
+<div class="outer-box-item">
+
+<img src="Driveback_imgs/car11_heroAngle.png">
+
+<div class="car-info">
+<h4>Toyota Camry TRD</h4>
+<p>2022</p>
+<p class="price">₹ 16 L</p>
+<p>Delhi</p>
+</div>
+
+</div>
+
+
+<div class="outer-box-item">
+
+<img src="Driveback_imgs/car12_heroAngle.png">
+
+<div class="car-info">
+<h4>Volkswagen Jetta</h4>
+<p>2020</p>
+<p class="price">₹ 10 L</p>
+<p>Pune</p>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
 <div class="next-car">
-    <h1>Sell your cars now !!</h1>
+
+<h1>Sell your cars now !!</h1>
+
 <div class="next-car-controls">
-    <a href="postCars.html"><button>Post your cars now</button></a>
+<a href="postCars.html"><button>Post your cars now</button></a>
 </div>
-</div>
-<div class="next-car-next">
 
 </div>
 <aside>
@@ -257,44 +369,117 @@
        We are committed to improving the car-buying experience by focusing on trust, convenience, and user satisfaction. DriveBack continues to grow as a platform where people can explore, compare, and purchase vehicles with confidence.
     </p>
 </aside>
+
+
 </main>
+
+
+
 <footer>
+
 <div class="footer-container">
+
 <table>
+
 <tr>
 <td><img src="Driveback_imgs/insta_logo.jpg"></td>
 <td>driveback_007</td>
 </tr>
+
 <tr>
 <td><img src="Driveback_imgs/mail_logo.webp"></td>
 <td>driveback_007@gmail.com</td>
 </tr>
+
 <tr>
 <td><img src="Driveback_imgs/whatsapp_logo.webp"></td>
 <td>+91 8807390064</td>
 </tr>
 </table>
+
+
 <div class="footer-logo">
 <img src="Driveback_imgs/driveBack_logoEdited.jpg">
 </div>
+
+
 </div>
+
 </footer>
+
+
+
 <script>
+
+
 function showBrands(){
+
 let items = document.querySelectorAll(".extra");
 let button = document.getElementById("brandButton");
+
 if(button.innerText === "View More"){
+
 items.forEach(function(i){
 i.style.display="block";
 });
+
 button.innerText="View Less";
+
 }else{
+
 items.forEach(function(i){
 i.style.display="none";
 });
+
 button.innerText="View More";
+
 }
+
 }
+
+
+
+function filterCars(){
+
+let location = document.getElementById("locationFilter").value;
+let budget = document.getElementById("budgetFilter").value;
+let year = document.getElementById("yearFilter").value;
+
+
+let cars = document.querySelectorAll("main > .outer-box > .outer-box-item");
+
+
+cars.forEach(function(car){
+
+let carLocation = car.getAttribute("data-location");
+let carBudget = car.getAttribute("data-budget");
+let carYear = car.getAttribute("data-year");
+
+let show = true;
+
+
+if(location && location !== carLocation){
+show = false;
+}
+
+if(budget && budget !== carBudget){
+show = false;
+}
+
+if(year && year !== carYear){
+show = false;
+}
+
+
+car.style.display = show ? "" : "none";
+
+});
+
+}
+
+
 </script>
+
+
 </body>
 </html>

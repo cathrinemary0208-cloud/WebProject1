@@ -5,34 +5,108 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
-<form class="login-box" method="post">
+
+<form class="login-box" method="post" onsubmit="return register()">
+
 <h1>Register</h1>
+
 <table cellspacing="10" cellpadding="20">
+
 <tr class="input-box">
 <td>
 <label>Username</label>
 </td>
 <td>
-<input type="text" placeholder="Enter your name">
+<input type="text" id="username" placeholder="Enter your name" required>
 </td>
 </tr>
+
+<tr class="input-box">
+<td>
+<label>Email</label>
+</td>
+<td>
+<input type="email" id="email" placeholder="Enter email address" required>
+</td>
+</tr>
+
 <tr class="input-box">
 <td>
 <label>Password</label>
 </td>
 <td>
-<input type="password" placeholder="********">
+<input type="password" id="password" placeholder="********" required>
 </td>
 </tr>
+
+<tr class="input-box">
+<td>
+<label>Confirm Password</label>
+</td>
+<td>
+<input type="password" id="confirm_password" placeholder="********" required>
+</td>
+</tr>
+
 </table>
-<button type="submit" class="register-btn" id="register-btn">Register</button>
+
+<button class="register-btn" id="register-btn" type="submit">Register</button>
+
 <p style="text-align:center">(OR)</p>
-<button type="submit" class="sign">Sign up with GOOGLE</button>
+
+<button type="button" class="sign">Sign up with GOOGLE</button>
+
 <p id="account">
 Already registered?
 <a href="login.html">Login</a>
 </p>
+
 </form>
+
+
+<script>
+
+function register(){
+
+let username = document.getElementById("username").value;
+let password = document.getElementById("password").value;
+let email = document.getElementById("email").value;
+let confirm_password = document.getElementById("confirm_password").value;
+localStorage.setItem("username", username);
+localStorage.setItem("password", password);
+
+let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+if(username === "" || password === "" || email === "" || confirm_password === ""){
+alert("Please fill all fields to register!");
+return false;
+}
+
+
+if(!emailPattern.test(email)){
+alert("Please enter a valid email address!");
+return false;
+}
+
+
+if(password !== confirm_password){
+alert("Password should match Confirm password");
+return false;
+}
+
+
+alert("You have registered successfully!!");
+
+window.location.href = "login.html";
+
+return false;
+
+}
+
+</script>
+
 </body>
 </html>

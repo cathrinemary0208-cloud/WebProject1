@@ -22,13 +22,11 @@ align-items:center;
 background-image:
 linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
 url("Driveback_imgs/postcar_bg.jpg");
-
+color:white;
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 }
-
-/* Heading Section */
 
 .header{
 text-align:center;
@@ -47,8 +45,6 @@ font-size:16px;
 line-height:1.6;
 opacity:0.9;
 }
-
-/* Form Card */
 
 .post-form{
 margin-top:40px;
@@ -74,14 +70,10 @@ flex-direction:column;
 gap:12px;
 }
 
-/* Labels */
-
 label{
 font-size:14px;
 margin-top:5px;
 }
-
-/* Inputs */
 
 input, textarea{
 width:100%;
@@ -98,8 +90,6 @@ textarea{
 height:90px;
 resize:none;
 }
-
-/* Button */
 
 button{
 margin-top:15px;
@@ -122,7 +112,10 @@ button:hover{
 background:#c40812;
 transform:scale(1.03);
 }
-
+#image
+{
+    color:black;
+}
 </style>
 </head>
 
@@ -133,7 +126,7 @@ transform:scale(1.03);
 <p>"Turn your car into opportunity. List it today and connect with genuine buyers looking for their next ride."</p>
 </div>
 
-<form id="carForm">
+<form id="carForm" >
 
 <div class="post-form">
 
@@ -161,7 +154,7 @@ transform:scale(1.03);
 <label>Upload Car Image</label>
 <input type="file" id="image">
 
-<button type="submit">Post Car</button>
+<button onclick="postCar()">Post Car</button>
 
 </div>
 
@@ -169,53 +162,70 @@ transform:scale(1.03);
 
 <script>
 
-document.getElementById("carForm").addEventListener("submit", function(event){
+function postCar(){
 
-event.preventDefault();   // stop page refresh
+var brand = document.getElementById("brand");
+var model = document.getElementById("model");
+var year = document.getElementById("year");
+var price = document.getElementById("price");
+var km = document.getElementById("km");
+var location = document.getElementById("location");
 
-// get values from the form
-var brand = document.getElementById("brand").value;
-var model = document.getElementById("model").value;
-var year = document.getElementById("year").value;
-var price = document.getElementById("price").value;
-var km = document.getElementById("km").value;
-var location = document.getElementById("location").value;
-var description = document.getElementById("description").value;
+var valid = true;
 
-// create a car object
-var car = {
-brand: brand,
-model: model,
-year: year,
-price: price,
-km: km,
-location: location,
-description: description
-};
-
-// get existing cars from localStorage
-var cars = localStorage.getItem("cars");
-
-// if there are no cars yet, create empty array
-if(cars == null){
-cars = [];
+if(brand.value == ""){
+brand.style.backgroundColor = "#ffdddd";
+valid = false;
 }else{
-cars = JSON.parse(cars);
+brand.style.backgroundColor = "white";
 }
 
-// add the new car to the list
-cars.push(car);
+if(model.value == ""){
+model.style.backgroundColor = "#ffdddd";
+valid = false;
+}else{
+model.style.backgroundColor = "white";
+}
 
-// save back to localStorage
-localStorage.setItem("cars", JSON.stringify(cars));
+if(year.value == ""){
+year.style.backgroundColor = "#ffdddd";
+valid = false;
+}else{
+year.style.backgroundColor = "white";
+}
 
-// show message
+if(price.value == ""){
+price.style.backgroundColor = "#ffdddd";
+valid = false;
+}else{
+price.style.backgroundColor = "white";
+}
+
+if(km.value == ""){
+km.style.backgroundColor = "#ffdddd";
+valid = false;
+}else{
+km.style.backgroundColor = "white";
+}
+
+if(valid == false){
+alert("Please fill all required fields");
+return;
+}
+
+var confirmPost = confirm("Do you want to post this car?");
+
+if(confirmPost == false){
+return;
+}
+
 alert("Car posted successfully!");
 
-// clear the form
 document.getElementById("carForm").reset();
 
-});
+}
+
+</script>
 
 </script>
 

@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="login.css">
 </head>
 <body>
-<form method="post" class="login-box">
+<form method="post" class="login-box" onsubmit="return login()">
 <h1>Login</h1>
 <table cellspacing="10" cellpadding="20">
 <tr class="input-box">
@@ -14,7 +14,7 @@
 <label>Username</label>
 </td>
 <td>
-<input type="text" placeholder="Enter your name">
+<input type="text" id="username" placeholder="Enter your name" required>
 </td>
 </tr>
 <tr class="input-box">
@@ -22,11 +22,11 @@
 <label>Password</label>
 </td>
 <td>
-<input type="password" placeholder="********">
+<input type="password" id="password" placeholder="********" required>
 </td>
 </tr>
 </table>
-<button type="submit" id="login-btn" class="login-btn">Login</button>
+<button   class="login-btn" onclick="login()">Login</button>
 <p style="text-align:center">(OR)</p>
 <button type="submit" class="sign">Sign in with GOOGLE</button>
 <p id="account">
@@ -35,5 +35,25 @@ No account?
 </p>
 </div>
 </form>
+<script>
+     function login()
+     {
+
+let username = document.getElementById("username").value;
+let password = document.getElementById("password").value;
+localStorage.setItem("username", username);
+localStorage.setItem("password", password);
+
+if(username === "" || password === ""){
+alert("Please fill all fields");
+return;
+}
+
+alert("You have logged in successfully!!");
+window.location.href = "driveBack.html";
+
+}
+     
+</script>
 </body>
 </html>
